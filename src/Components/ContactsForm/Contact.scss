@@ -1,138 +1,183 @@
-@use "../../index.scss" as i;
+// @use "../../index.scss" as i;
 
-// משתנים
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-color: #333;
-$background-color: #f8f9fa;
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: $background-color;
-    margin: 0;
-    padding: 0;
-    color: $font-color;
-}
-
-// כותרת עליונה
-header {
-    background-color: $primary-color;
-    padding: 20px;
-    text-align: center;
-
-    h1 {
-        color: white;
-        margin: 0;
-        font-size: 2.5rem;
-    }
-}
-
-// אזור תוכן
-.main-content {
+.form {
+    background-color: var(--secondary-color);
+    margin-bottom: 1.5em;
+    padding: 0% 15%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    padding: 20px;
+    font-size: .75em;
 
-    .intro {
-        max-width: 600px;
-        text-align: center;
-        margin-bottom: 40px;
-
-        h2 {
-            font-size: 2rem;
-            color: $primary-color;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
+    h2 {
+        margin: 1em 0;
+        font-size: 1em;
+        color: var(--background-color);
+        background-color: var(--secondary-color);
     }
 
-    .cta-button {
-        background-color: $secondary-color;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
+    .inputs-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1em;
+        background-color: var(--secondary-color);
+        input{
+            // border: 2px solid black;
+            box-shadow: var(--soft-box-shadow);
+        }
 
-        &:hover {
-            background-color: darken($secondary-color, 10%);
+    }
+
+    button {
+        width: 100px;
+        height: 45px;
+        margin: 1em auto 2em auto;
+        font-size: .75em;
+        background-color: var(--background-color);
+        transition: 300ms;
+        box-shadow: var(--bold-box-shadow);
+        &:hover{
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            border-radius: 8px;
         }
     }
 }
+
+
+// משתנים
+// $primary-color: #3498db;
+// $secondary-color: #2ecc71;
+// $font-color: #333;
+// $background-color: #f8f9fa;
+
+// body {
+//     font-family: 'Arial', sans-serif;
+//     background-color: $background-color;
+//     margin: 0;
+//     padding: 0;
+//     color: $font-color;
+// }
+
+// כותרת עליונה
+// header {
+//     background-color: $primary-color;
+//     padding: 20px;
+//     text-align: center;
+
+//     h1 {
+//         color: white;
+//         margin: 0;
+//         font-size: 2.5rem;
+//     }
+// }
+
+// אזור תוכן
+// .main-content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     min-height: 80vh;
+//     padding: 20px;
+
+//     .intro {
+//         max-width: 600px;
+//         text-align: center;
+//         margin-bottom: 40px;
+
+//         h2 {
+//             font-size: 2rem;
+//             color: $primary-color;
+//         }
+
+//         p {
+//             font-size: 1.2rem;
+//             line-height: 1.6;
+//         }
+//     }
+
+//     .cta-button {
+//         background-color: $secondary-color;
+//         color: white;
+//         padding: 15px 30px;
+//         border: none;
+//         font-size: 1.2rem;
+//         cursor: pointer;
+//         transition: background-color 0.3s;
+
+//         &:hover {
+//             background-color: darken($secondary-color, 10%);
+//         }
+//     }
+// }
 
 // אזור תכונות/שירותים
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: $primary-color;
-    color: white;
+// .features {
+//     display: flex;
+//     justify-content: space-around;
+//     padding: 50px;
+//     background-color: $primary-color;
+//     color: white;
 
-    .feature {
-        text-align: center;
-        max-width: 300px;
+//     .feature {
+//         text-align: center;
+//         max-width: 300px;
 
-        img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
+//         img {
+//             width: 80px;
+//             margin-bottom: 20px;
+//         }
 
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+//         h3 {
+//             font-size: 1.5rem;
+//             margin-bottom: 15px;
+//         }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-    }
-}
+//         p {
+//             font-size: 1rem;
+//             line-height: 1.5;
+//         }
+//     }
+// }
 
 // כותרת תחתונה
-footer {
-    background-color: darken($primary-color, 5%);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+// footer {
+//     background-color: darken($primary-color, 5%);
+//     color: white;
+//     text-align: center;
+//     padding: 20px;
+//     font-size: 0.9rem;
 
-    a {
-        color: white;
-        text-decoration: none;
+//     a {
+//         color: white;
+//         text-decoration: none;
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
+//         &:hover {
+//             text-decoration: underline;
+//         }
+//     }
+// }
 
 // מדיה קוורי
-@media only screen and (max-width: 900px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
+// @media only screen and (max-width: 900px) {
+//     .features {
+//         flex-direction: column;
+//         align-items: center;
 
-        .feature {
-            margin-bottom: 20px;
-        }
-    }
+//         .feature {
+//             margin-bottom: 20px;
+//         }
+//     }
 
-    .main-content {
-        .cta-button {
-            font-size: 1rem;
-            padding: 10px 20px;
-        }
-    }
+//     .main-content {
+//         .cta-button {
+//             font-size: 1rem;
+//             padding: 10px 20px;
+//         }
+//     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-}
+//     header h1 {
+//         font-size: 2rem;
+//     }
+// }

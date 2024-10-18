@@ -29,41 +29,43 @@ const ContactForm: React.FC = () => {
   ];
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <h2>צרו קשר</h2>
-      <input
-        type="text"
-        name="name"
-        minLength={2}
-        maxLength={15}
-        placeholder="שם מלא"
-        value={contact.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        minLength={2}
-        maxLength={30}
-        placeholder="מייל"
-        value={contact.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="tel"
-        name="phone"
-        minLength={9}
-        maxLength={15}
-        placeholder="טלפון"
-        value={contact.phone}
-        onChange={handleChange}
-        required
-      />
-      {/* <button type="submit" disabled={.submitting}>
-                Send
-            </button> */}
+      <div className="inputs-container">
+        <input
+          type="text"
+          name="name"
+          minLength={2}
+          maxLength={15}
+          placeholder="שם מלא"
+          value={contact.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          minLength={2}
+          maxLength={30}
+          placeholder="מייל"
+          value={contact.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="tel"
+          name="phone"
+          minLength={9}
+          maxLength={15}
+          placeholder="טלפון"
+          value={contact.phone}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button type="submit" disabled={true}>
+        שלח
+      </button>
     </form>
   );
 };

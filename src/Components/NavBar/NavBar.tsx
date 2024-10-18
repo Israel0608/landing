@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './Navbar.scss';
 
 const Navbar: React.FC = () => {
+
   return (
     <nav className="Navbar">
       <ul>

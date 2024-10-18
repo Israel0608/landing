@@ -57,7 +57,13 @@ root.render(
       {/* <ServicesList services={services} />
     <Testimonial testimonials={testimonials} /> */}
       <AboutSection />
-      <ContactForm />
     </div>
+    <ContactForm />
+    <div>
+      לינקים?
+    </div>
+    <footer>
+      זכויות יוצרים וקרדיט לנו
+    </footer>
   </React.StrictMode>
 );
