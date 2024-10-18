@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Contact Us</h2>
+      <h2>צרו קשר</h2>
       <input
         type="text"
         name="name"

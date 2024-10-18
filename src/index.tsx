@@ -53,9 +53,11 @@ document.title = "E.I Group";
 root.render(
   <React.StrictMode>
     <Navbar />
-    {/* <ServicesList services={services} />
+    <div className="main-content">
+      {/* <ServicesList services={services} />
     <Testimonial testimonials={testimonials} /> */}
-    <AboutSection />
-    <ContactForm />
+      <AboutSection />
+      <ContactForm />
+    </div>
   </React.StrictMode>
 );
