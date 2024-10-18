@@ -2,22 +2,15 @@
   font-size: clamp(20px, 5vw, 40px);
   display: flex;
   width: 100vw !important;
+
+  --primary-color: #555555;
+  --secondary-color: #777777;
+  --accent-color: #999999;
+  --background-color: #E0E0E0;
+
+  --soft-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --bold-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-// $primary_color: #9B4819;
-// $primary_color2: #314028;
-// $secondary_color: #F4F1E8;
-// $tertiary_color: #BD8F53;
-
-$primary_color: #555555;
-$primary_color2: #777777;
-$secondary_color: #E0E0E0;
-$tertiary_color: #999999;
-
-// $primary_color: #4A4A4A;
-// $primary_color2: #6E6E6E; 
-// $secondary_color: #D8D8D8;
-// $tertiary_color: #A1A1A1;
 
 html,
 body,
@@ -26,41 +19,47 @@ body * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  direction: rtl;
+
+  background-color: var(--background-color);
 }
 
+// #root{
+//   margin-top: 65px;
+// }
 
-::-webkit-scrollbar {
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
 
-@mixin primary_color_text {
-  color: $primary_color;
-}
+// @mixin primary_color_text {
+//   color: $primary_color;
+// }
 
-@mixin primary_color_background {
-  background-color: $primary_color;
-}
+// @mixin primary_color_background {
+//   background-color: $primary_color;
+// }
 
-@mixin primary_color2_text {
-  color: $primary_color2;
-}
+// @mixin secondary_color_text {
+//   color: $secondary_color;
+// }
 
-@mixin primary_color2_background {
-  background-color: $primary_color2;
-}
+// @mixin secondary_color_background {
+//   background-color: $secondary_color;
+// }
 
-@mixin secondary_color_text {
-  color: $secondary_color;
-}
+// @mixin background_color_text {
+//   color: $background_color;
+// }
 
-@mixin secondary_color_background {
-  background-color: $secondary_color;
-}
+// @mixin background_color_background {
+//   background-color: $background_color;
+// }
 
-@mixin tertiary_color_text {
-  color: $tertiary_color;
-}
+// @mixin tertiary_color_text {
+//   color: $tertiary_color;
+// }
 
-@mixin tertiary_color_background {
-  background-color: $tertiary_color;
-}
+// @mixin tertiary_color_background {
+//   background-color: $tertiary_color;
+// }

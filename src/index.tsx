@@ -5,7 +5,7 @@ import ServicesList from './Components/Services/ServicesList';
 import TestimonialModel from './Models/Testimonial';
 import MaintenanceService from './Models/MaintenanceService';
 import Testimonial from './Components/TestimonialList/Testimonial';
-import Navbar from './Components/NavBar/NavBar';
+import Navbar from './Components/NavBar/Navbar';
 import ContactForm from './Components/ContactsForm/Contact';
 import AboutSection from '../src/Components/AboutSection/AboutSection'
 import logo from "../../Assets/images/logo.jpeg";
@@ -48,12 +48,11 @@ const testimonials: TestimonialModel[] = [
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-document.title = "dalbayo";
+document.title = "E.I Group";
 
 root.render(
   <React.StrictMode>
     <Navbar />
-    
     {/* <ServicesList services={services} />
     <Testimonial testimonials={testimonials} /> */}
     <AboutSection />
