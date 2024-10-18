@@ -1,0 +1,138 @@
+@use "../../index.scss" as i;
+
+// משתנים
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-color: #333;
+$background-color: #f8f9fa;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+    color: $font-color;
+}
+
+// כותרת עליונה
+header {
+    background-color: $primary-color;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        color: white;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+}
+
+// אזור תוכן
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+
+    .intro {
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 2rem;
+            color: $primary-color;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    }
+
+    .cta-button {
+        background-color: $secondary-color;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
+
+// אזור תכונות/שירותים
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: $primary-color;
+    color: white;
+
+    .feature {
+        text-align: center;
+        max-width: 300px;
+
+        img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+// כותרת תחתונה
+footer {
+    background-color: darken($primary-color, 5%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// מדיה קוורי
+@media only screen and (max-width: 900px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+
+        .feature {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-content {
+        .cta-button {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

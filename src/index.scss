@@ -1,0 +1,66 @@
+:root {
+  font-size: clamp(20px, 5vw, 40px);
+  display: flex;
+  width: 100vw !important;
+}
+
+// $primary_color: #9B4819;
+// $primary_color2: #314028;
+// $secondary_color: #F4F1E8;
+// $tertiary_color: #BD8F53;
+
+$primary_color: #555555;
+$primary_color2: #777777;
+$secondary_color: #E0E0E0;
+$tertiary_color: #999999;
+
+// $primary_color: #4A4A4A;
+// $primary_color2: #6E6E6E; 
+// $secondary_color: #D8D8D8;
+// $tertiary_color: #A1A1A1;
+
+html,
+body,
+body * {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@mixin primary_color_text {
+  color: $primary_color;
+}
+
+@mixin primary_color_background {
+  background-color: $primary_color;
+}
+
+@mixin primary_color2_text {
+  color: $primary_color2;
+}
+
+@mixin primary_color2_background {
+  background-color: $primary_color2;
+}
+
+@mixin secondary_color_text {
+  color: $secondary_color;
+}
+
+@mixin secondary_color_background {
+  background-color: $secondary_color;
+}
+
+@mixin tertiary_color_text {
+  color: $tertiary_color;
+}
+
+@mixin tertiary_color_background {
+  background-color: $tertiary_color;
+}
