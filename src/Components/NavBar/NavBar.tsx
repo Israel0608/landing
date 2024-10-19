@@ -1,33 +1,32 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './Navbar.scss';
+import logo from "../../Assets/images/logo-page.jpeg"
 
 const Navbar: React.FC = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="Navbar">
-      <ul>
+      <ul className='outer-ul'>
 
-        {/* <li className="logo">
-          לוגו?
-        </li> */}
-
-        <li>
-          {/* <HashLink smooth to="/home">בית</HashLink> */}
-          <a href="#about">בית</a>
+        <li className="trigger" onClick={() => setIsOpen(!isOpen)}>
+          <a>XXX</a>
         </li>
-        <li>
-          <a href="#about">אודותינו</a>
+        <li className="logo">
+          <img src={logo} alt="logo" />
         </li>
-        <li>
-          <a href="#Contact">צור קשר</a>
+        <li className={`li-inner-ul ${isOpen? "is-open": ""}`}>
+          <ul className='inner-ul'>
+            <li>
+              <a href="#about">בית</a>
+              <a href="#about">אודותינו</a>
+              <a href="#Contact">צור קשר</a>
+            </li>
+          </ul>
         </li>
       </ul>
-      {/* <div className="hamburger">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div> */}
     </nav>
   );
 };
