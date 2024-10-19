@@ -1,69 +1,50 @@
 import React, { useState } from 'react';
-import Contact from '../../Models/Contact';
-import ContactModel from '../../Models/Contact'; // אם יש ייבוא נוסף שדרוש עבור המודל
 import './Contact.scss';
+import { useForm } from '@formspree/react';
 
 
 const ContactForm: React.FC = () => {
-  const [contact, setContact] = useState<ContactModel>({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
-  };
+  const [state, handleSubmit] = useForm("xxxxxx"); //xkgnnbgw
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', contact);
-    // כאן תוכל להוסיף פונקציה לשלוח את הנתונים לשרת או לכל מערכת אחרת
-  };
-
-  const contactOptions: Contact[] = [
-    new Contact("Phone", "(+972)54-566-9236", "tel:0545669236", "phone-book.png"),
-    new Contact("Email", "yitzhakveliran18@gmail.com", "mailto:yitzhakveliran18@gmail.com", "mail.png"),
-  ];
+  if (state.succeeded) {
+    return <p>המידע התקבל אצלנו, בקרוב נהיה בקשר!</p>;
+  }
 
   return (
     <form onSubmit={handleSubmit} className='form'>
       <h2>צרו קשר</h2>
       <div className="inputs-container">
         <input
+          required
           type="text"
           name="name"
+          id="name"
           minLength={2}
           maxLength={15}
-          placeholder="שם מלא"
-          value={contact.name}
-          onChange={handleChange}
-          required
+          placeholder="שם"
         />
         <input
+          required
           type="email"
           name="email"
+          id="email"
           minLength={2}
           maxLength={30}
           placeholder="מייל"
-          value={contact.email}
-          onChange={handleChange}
-          required
         />
         <input
+          required
           type="tel"
-          name="phone"
+          name="tel"
+          id="tel"
           minLength={9}
           maxLength={15}
-          placeholder="טלפון"
-          value={contact.phone}
-          onChange={handleChange}
-          required
+          placeholder="נייד"
         />
       </div>
-      <button type="submit" disabled={true}>
+
+      <button type="submit" disabled={state.submitting}>
         שלח
       </button>
     </form>
