@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='form'>
+    <form onSubmit={handleSubmit} className='form' id='contact-us'>
       <h2>צרו קשר</h2>
       <div className="inputs-container">
         <input
