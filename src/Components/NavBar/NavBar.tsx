@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import './Navbar.scss';
+import './NavBar.scss';
 import logo from "../../Assets/images/logo-page.jpeg"
 
 const Navbar: React.FC = () => {
@@ -17,11 +17,11 @@ const Navbar: React.FC = () => {
         <li className="logo">
           <img src={logo} alt="logo" />
         </li>
-        <li className={`li-inner-ul ${isOpen? "is-open": ""}`}>
+        <li className={`li-inner-ul ${isOpen ? "is-open" : ""}`}>
           <ul className='inner-ul'>
             <li>
-              <a href="#about">בית</a>
-              <a href="#about">אודותינו</a>
+              <a href="#home">בית</a>
+              <a href="#AboutSection">אודותינו</a>
               <a href="#Contact">צור קשר</a>
             </li>
           </ul>
