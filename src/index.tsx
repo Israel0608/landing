@@ -5,7 +5,7 @@ import ServicesList from './Components/Services/ServicesList';
 import TestimonialModel from './Models/Testimonial';
 import MaintenanceService from './Models/MaintenanceService';
 import Testimonial from './Components/TestimonialList/Testimonial';
-import Navbar from './Components/NavBar/Navbar';
+import Navbar from './Components/NavBar/NavBar';
 import ContactForm from './Components/ContactsForm/Contact';
 import AboutSection from '../src/Components/AboutSection/AboutSection'
 import logo from "../../Assets/images/logo.jpeg";

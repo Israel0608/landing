@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import './Navbar.scss';
+import './NavBar.scss';
 import logo from "../../Assets/images/logo-page.jpeg"
 import hamburgerMenu from "../../Assets/images/hamburger-menu.png"
 
@@ -37,6 +37,9 @@ const Navbar: React.FC = () => {
                   e.preventDefault();
                   document.getElementById('contact-us').scrollIntoView({ behavior: "smooth" })
                 }}>צור קשר</a>
+              <a href="#home">בית</a>
+              <a href="#AboutSection">אודותינו</a>
+              <a href="#Contact">צור קשר</a>
             </li>
           </ul>
         </li>
