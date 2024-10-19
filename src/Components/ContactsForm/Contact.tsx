@@ -8,7 +8,10 @@ const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xxxxxx"); //xkgnnbgw
 
   if (state.succeeded) {
-    return <p>המידע התקבל אצלנו, בקרוב נהיה בקשר!</p>;
+    return <form className='form'>
+      <h2>צרו קשר</h2>
+      <p>המידע התקבל אצלנו, בקרוב נהיה בקשר!</p>;
+    </form>
   }
 
   return (
