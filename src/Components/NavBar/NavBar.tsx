@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="Navbar">
+      <></>
       <ul className='outer-ul'>
 
         <li className="trigger" onClick={() => setIsOpen(!isOpen)}>
